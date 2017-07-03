@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/legacy_status_bar_latest_event_content"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:background="@drawable/notification_bg"
+    android:visibility="visible" >
+
+    <ImageView
+        android:id="@+id/legacy_icon"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#3333B5E5"
+        android:scaleType="center" />
+
+    <ImageButton
+        android:id="@+id/legacy_quickreply"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/abc_list_selector_holo_dark"
+        android:clickable="true"
+        android:drawablePadding="0dip"
+        android:scaleType="center"
+        android:src="@drawable/ic_action_send"
+        android:text="QuickReply" />
+
+    <LinearLayout
+        android:id="@+id/legacy_line1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="2dp"
+        android:layout_toLeftOf="@id/legacy_quickreply"
+        android:layout_toRightOf="@id/legacy_icon"
+        android:orientation="horizontal"
+        android:paddingTop="6dp" >
+
+        <TextView
+            android:id="@+id/legacy_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Title"
+            android:textAppearance="@style/NotificationTitle" />
+
+        <DateTimeView
+            android:id="@+id/legacy_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:singleLine="true"
+            android:textAppearance="@style/NotificationTime" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/legacy_line3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/legacy_line1"
+        android:layout_below="@+id/legacy_line1"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@id/legacy_quickreply"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/legacy_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal"
+            android:singleLine="true"
+            android:text="Text"
+            android:textAppearance="@style/NotificationText" />
+
+        <TextView
+            android:id="@+id/legacy_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:singleLine="true"
+            android:text="5"
+            android:textAppearance="@style/NotificationInfo" />
+
+        <ImageView
+            android:id="@+id/legacy_right_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:layout_weight="0"
+            android:scaleType="centerInside"
+            android:src="@drawable/fusionnotif"
+            android:visibility="visible" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:seekBar="http://schemas.android.com/apk/res/im.fsn.messenger"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/pfUserInterfaceTitle" >
+        <ListPreference
+            android:defaultValue="0"
+            android:enabled="true"
+            android:entries="@array/themeOptionNames"
+            android:entryValues="@array/sixObjectArray"
+            android:key="pfThemeOption"
+            android:title="@string/theme" />
+        <ListPreference
+            android:defaultValue="1"
+            android:enabled="true"
+            android:entries="@array/PageNavigationModes"
+            android:entryValues="@array/twoObjectArray"
+            android:key="pfPageNavigationMode"
+            android:title="@string/PageNavigationMode" />
+
+        <PreferenceScreen android:title="@string/Contacts" >
+            <im.fsn.messenger.SeekBarDialogPreference
+                android:defaultValue="2"
+                android:key="pfContactsMaxLines"
+                android:max="5"
+                android:title="@string/pfContactsMaxLines_title"
+                seekBar:increment="1"
+                seekBar:min="1"
+                seekBar:pluralItemText="@string/pfContactsMaxLines_text"
+                seekBar:singleItemText="@string/pfContactsMaxLines_singleText" />
+            <im.fsn.messenger.SeekBarDialogPreference
+                android:defaultValue="4"
+                android:enabled="true"
+                android:key="pfContactItemIndicatorWidth"
+                android:max="16"
+                android:title="@string/IMServiceIndicatorWidth"
+                seekBar:increment="1"
+                seekBar:min="1"
+                seekBar:pluralItemText="dp" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/Conversations" >
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:enabled="true"
+                android:key="pfShowContactBanner"
+                android:title="@string/ShowContactBanner" />
+
+            <im.fsn.messenger.SeekBarDialogPreference
+                android:defaultValue="4"
+                android:enabled="true"
+                android:key="pfMessageItemIndicatorWidth"
+                android:max="16"
+                android:title="@string/IMServiceIndicatorWidth"
+                seekBar:increment="1"
+                seekBar:min="0"
+                seekBar:pluralItemText="dp" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:enabled="true"
+                android:key="pfMessageItemIcon"
+                android:title="@string/IMServiceIcon" />
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:enabled="true"
+                android:key="pfMessageItemPicture"
+                android:title="@string/ContactPicture" />
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:enabled="true"
+                android:key="pfMessageItemColoredStatus"
+                android:title="@string/ColoredStatus" />
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:enabled="true"
+                android:key="pfConversationColoredSendIcon"
+                android:title="@string/ColoredSendIcon" />
+
+            <ListPreference
+                android:defaultValue="0"
+                android:entries="@array/SelectorIMServiceNames"
+                android:entryValues="@array/threeObjectArray"
+                android:key="pfConversationSelectorIMService"
+                android:title="@string/SelectorIMService" />
+
+            <PreferenceScreen android:title="@string/Emoticons" >
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:enabled="false"
+                    android:key="pfEmoticonReplaceSmileys"
+                    android:title="@string/ReplaceSmileys" />
+            </PreferenceScreen>
+            <PreferenceScreen android:title="@string/TextEntry" >
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:enabled="true"
+                    android:key="pfConversationEnterAsSend"
+                    android:title="@string/EnterAsSend" />
+
+                <ListPreference
+                    android:defaultValue="1"
+                    android:entries="@array/TextCapitalization"
+                    android:entryValues="@array/fourObjectArray"
+                    android:key="pfConversationTextCapitalization"
+                    android:title="@string/Capitalization" />
+
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfConversationAutoCorrect"
+                    android:title="@string/AutoCorrect" />
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:enabled="true"
+                    android:key="pfConversationAutoComplete"
+                    android:title="@string/AutoComplete" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfConversationTextSuggestions"
+                    android:title="@string/Suggestions" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfConversationMultiline"
+                    android:title="@string/Multiline" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfConversationShortMessageFeatures"
+                    android:title="@string/ShortMessageFeatures" />
+            </PreferenceScreen>
+
+            <im.fsn.messenger.SeekBarDialogPreference
+                android:defaultValue="1500"
+                android:enabled="false"
+                android:key="pfFlashSendIconOnWrongIMService"
+                android:max="5000"
+                android:title="@string/FlashSendIconOnWrongIMService"
+                seekBar:increment="50"
+                seekBar:min="0"
+                seekBar:pluralItemText="ms" />
+        </PreferenceScreen>
+        <PreferenceScreen android:title="@string/Notifications" >
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:enabled="true"
+                android:key="pfUseNotifications"
+                android:title="@string/UseNotifications" />
+
+            <PreferenceScreen android:title="@string/QuickReply" >
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:enabled="true"
+                    android:key="pfQuickAutoOpen"
+                    android:title="@string/OpenAutomatically" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfQuickReplyAutoAdvance"
+                    android:title="@string/AdvanceAutomatically" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfQuickAutoClose"
+                    android:title="@string/CloseAutomatically" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfQuickAutoKeyboard"
+                    android:title="@string/OpenKeyboardAutomatically" />
+                <CheckBoxPreference
+                    android:defaultValue="true"
+                    android:enabled="true"
+                    android:key="pfQuickReplyShowActionBar"
+                    android:title="@string/ShowActionBar" />
+
+                <im.fsn.messenger.SeekBarDialogPreference
+                    android:defaultValue="95"
+                    android:enabled="true"
+                    android:key="pfQuickReplyWidth"
+                    android:max="100"
+                    android:title="@string/WindowWidth"
+                    seekBar:increment="5"
+                    seekBar:min="35"
+                    seekBar:pluralItemText="%" />
+                <im.fsn.messenger.SeekBarDialogPreference
+                    android:defaultValue="65"
+                    android:enabled="true"
+                    android:key="pfQuickReplyHeight"
+                    android:max="100"
+                    android:title="@string/WindowHeight"
+                    seekBar:increment="5"
+                    seekBar:min="35"
+                    seekBar:pluralItemText="%" />
+                <im.fsn.messenger.SeekBarDialogPreference
+                    android:defaultValue="5"
+                    android:enabled="true"
+                    android:key="pfQuickReplyTransparency"
+                    android:max="90"
+                    android:title="@string/Transparency"
+                    seekBar:increment="5"
+                    seekBar:min="0"
+                    seekBar:pluralItemText="%" />
+                <im.fsn.messenger.SeekBarDialogPreference
+                    android:defaultValue="50"
+                    android:enabled="true"
+                    android:key="pfQuickReplyBackgroundDimming"
+                    android:max="100"
+                    android:title="@string/BackgroundDimming"
+                    seekBar:increment="5"
+                    seekBar:min="0"
+                    seekBar:pluralItemText="%" />
+            </PreferenceScreen>
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:key="pfUseNotificationContactPicture"
+                android:title="@string/ContactPicture" />
+            
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:key="pfNotificationVibrate"
+                android:title="@string/Vibrate" />
+            
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:key="pfNotificationWakeUp"
+                android:title="@string/WakeUpDevice" />
+            
+
+            <RingtonePreference
+                android:defaultValue="content://settings/system/notification_sound"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:key="pfNotificationRingtone"
+                android:ringtoneType="notification"
+                android:showDefault="true"
+                android:showSilent="true"
+                android:title="@string/Ringtone" />
+
+            <CheckBoxPreference
+                android:defaultValue="true"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:key="pfNotificationUpscaleContactPicture"
+                android:title="@string/UpscaleContactPictures" />
+
+            <ListPreference
+                android:defaultValue="2"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:entries="@array/DismissActionNames"
+                android:entryValues="@array/threeObjectArray"
+                android:key="pfNotificationDismissAction"
+                android:title="@string/DismissAction" />
+            <ListPreference
+                android:defaultValue="0"
+                android:dependency="pfUseNotifications"
+                android:enabled="true"
+                android:entries="@array/MessageOrderNames"
+                android:entryValues="@array/twoObjectArray"
+                android:key="pfNotificationMessageOrder"
+                android:title="@string/MessageOrder" />
+
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:enabled="false"
+                android:key="pfNotificationSplitByContact"
+                android:title="@string/SplitByContact" />
+        </PreferenceScreen>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="pfUseHardwareAcceleration"
+            android:title="@string/UseHardwareAcceleration" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/TextMessaging" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:enabled="true"
+            android:key="pfSMSEnabled"
+            android:title="@string/Enabled" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:dependency="pfSMSEnabled"
+            android:enabled="true"
+            android:key="pfSMSProcessIncomingMessages"
+            android:title="@string/ProcessIncomingMessages" />
+
+        <ListPreference
+            android:defaultValue="0"
+            android:dependency="pfSMSEnabled"
+            android:enabled="true"
+            android:entries="@array/smsSplitLongMessageNames"
+            android:entryValues="@array/threeObjectArray"
+            android:key="pfSMSSplitMessages"
+            android:title="@string/SplitLongMessages" />
+
+        <PreferenceScreen android:title="@string/MMSProxySettings" >
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:enabled="true"
+                android:key="pfMMSManualProxySettings"
+                android:title="@string/ManualProxySettings" />
+
+            <EditTextPreference
+                android:dependency="pfMMSManualProxySettings"
+                android:enabled="true"
+                android:key="pfMMSProxyAddress"
+                android:title="@string/MMSProxyAddress" />
+            <EditTextPreference
+                android:defaultValue="80"
+                android:dependency="pfMMSManualProxySettings"
+                android:enabled="true"
+                android:key="pfMMSProxyPort"
+                android:title="@string/MMSProxyPort" />
+        </PreferenceScreen>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pfGoogleVoiceTitle" >
+        <ListPreference
+            android:defaultValue=""
+            android:key="pfGoogleVoiceAccount"
+            android:title="@string/Account" />
+
+        <im.fsn.messenger.SeekBarDialogPreference
+            android:defaultValue="20"
+            android:enabled="false"
+            android:key="pfGoogleVoiceSyncCount"
+            android:max="500"
+            android:title="@string/ConversationsToSync"
+            seekBar:increment="20"
+            seekBar:min="0"
+            seekBar:pluralItemText="@string/Conversations" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

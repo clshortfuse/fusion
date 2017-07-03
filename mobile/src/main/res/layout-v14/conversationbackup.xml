@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:holo="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/lvConversation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadingEdgeLength="16dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlContactBanner"
+        android:layout_width="match_parent"
+        android:layout_height="72dp" >
+
+        <ImageView
+            android:id="@+id/ivBannerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
+        <QuickContactBadge
+            android:id="@+id/qcbBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="4dip" />
+
+        <Spinner
+            android:id="@+id/spConversationBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="4dip"
+            android:paddingRight="4dip" />
+
+        <TextView
+            android:id="@+id/tvConversationBannerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@id/spConversationBanner"
+            android:layout_toRightOf="@+id/qcbBanner"
+            android:paddingBottom="4dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="4dp"
+            android:text="Contact Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#ffffffff" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:id="@+id/llEntryLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/ibEditMore"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="0dip"
+            android:minWidth="36dp"
+            android:scaleType="center" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:background="?android:attr/listDivider"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp" />
+
+        <EditText
+            android:id="@+id/etEntryText"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dip"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical|fill"
+            android:imeOptions="actionSend"
+            android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+            android:maxLength="2000"
+            android:maxLines="3"
+            android:nextFocusRight="@+id/ibSend"
+            android:textSize="16sp" />
+
+        <View
+            android:layout_width="1dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="?android:attr/listDivider"
+            android:paddingBottom="4dp"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:paddingTop="4dp" />
+
+        <LinearLayout
+            android:id="@+id/llSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="64dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tvCounter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/ibSend"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:drawablePadding="0dip"
+                android:scaleType="center"
+                android:src="@drawable/ic_action_send" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

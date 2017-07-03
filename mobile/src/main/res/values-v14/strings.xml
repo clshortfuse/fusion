@@ -1,0 +1,14 @@
+<resources>
+
+    
+    <string-array name="themeOptionNames">
+        <item>Holo Dark</item>
+        <item>Holo Light</item>
+        <item>Holo Light with Dark ActionBar</item>
+        <item>Default Dark</item>
+        <item>Default Light</item>
+        <item>Default Light with Dark ActionBar</item>
+    </string-array>
+
+
+</resources>

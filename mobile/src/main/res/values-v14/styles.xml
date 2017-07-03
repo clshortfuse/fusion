@@ -1,0 +1,68 @@
+<resources>
+
+    <style name="Theme.DeviceDefault" parent="android:Theme.DeviceDefault">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.PopUp" parent="android:Theme.DeviceDefault">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+        <item name="actionBarSize">?android:attr/actionBarSize</item>
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Dialog" parent="android:Theme.DeviceDefault.Dialog" />
+
+    <style name="Theme.DeviceDefault.Light" parent="android:Theme.DeviceDefault.Light">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.Light.DarkActionBar" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+
+    </style>
+
+    <style name="Theme.DeviceDefault.Dialog.Light" parent="android:Theme.DeviceDefault.Light.Dialog" />
+
+    <style name="Theme.Holo.Light.DarkActionBar" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.PopUp.Light" parent="android:Theme.DeviceDefault.Light">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+        <item name="actionBarSize">?android:attr/actionBarSize</item>
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.DeviceDefault.PopUp.Light.DarkActionBar" parent="android:Theme.DeviceDefault.Light.DarkActionBar">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+        <item name="actionBarSize">?android:attr/actionBarSize</item>
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="Theme.Holo.PopUp.Light.DarkActionBar" parent="android:Theme.Holo.Light.DarkActionBar">
+        <item name="windowActionBar">?android:attr/windowActionBar</item>
+        <item name="actionBarSize">?android:attr/actionBarSize</item>
+
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">adjustResize|stateHidden</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+</resources>

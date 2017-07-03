@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".ui.ConversationFragment">
+
+    <item
+        android:id="@+id/mnuInfo"
+        android:icon="@drawable/action_about_light"
+        app:showAsAction="ifRoom"
+        android:title="@string/Info"/>
+    <item
+        android:id="@+id/mnuCopy"
+        android:icon="@drawable/content_copy_light"
+        app:showAsAction="ifRoom"
+        android:title="@string/Copy"/>
+
+    <item
+        android:id="@+id/mnuDelete"
+        android:icon="@drawable/content_discard_light"
+        app:showAsAction="ifRoom"
+        android:title="@string/Delete"/>
+
+
+
+</menu>

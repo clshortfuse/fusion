@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llConversation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="16" >
+
+    <ListView
+        android:id="@+id/lvConversation"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="8.95" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.1"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6.95"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/llSlideOut"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <TabHost
+                    android:id="@+id/thConversations"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6.0" >
+
+                    <TabWidget
+                        android:id="@android:id/tabs"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:tabStripEnabled="true" >
+                    </TabWidget>
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="0.0dip"
+                        android:layout_height="0.0dip" >
+
+                        <View
+                            android:id="@+id/vServicesFake"
+                            android:layout_width="0.0dip"
+                            android:layout_height="0.0dip"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/vEmojiFake"
+                            android:layout_width="0.0dip"
+                            android:layout_height="0.0dip"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/vCameraFake"
+                            android:layout_width="0.0dip"
+                            android:layout_height="0.0dip"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/natureEmojiFakeGrid"
+                            android:layout_width="0.0dip"
+                            android:layout_height="0.0dip"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/placesEmojiFakeGrid"
+                            android:layout_width="0.0dip"
+                            android:layout_height="0.0dip"
+                            android:visibility="gone" />
+
+                        <View
+                            android:id="@+id/symbolsEmojiFakeGrid"
+                            android:layout_width="0.0dip"
+                            android:layout_height="0.0dip"
+                            android:visibility="gone" />
+                    </FrameLayout>
+                </TabHost>
+
+                <ImageButton
+                    android:id="@+id/emoji_keyboard_backspace"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:src="@drawable/sym_keyboard_delete_holo" />
+            </LinearLayout>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/vpSlideOut"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0" >
+            </android.support.v4.view.ViewPager>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llEntryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/ibEditMore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="0dip"
+                android:minWidth="36dp"
+                android:scaleType="center" />
+
+            <EditText
+                android:id="@+id/etEntryText"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dip"
+                android:layout_weight="1"
+                android:gravity="center_vertical|fill"
+                android:hint="@string/message_box_hint"
+                android:imeOptions="actionSend"
+                android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+                android:maxLength="2000"
+                android:maxLines="3"
+                android:nextFocusRight="@+id/ibSend"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:id="@+id/llSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/tvCounter"
+                    android:layout_width="48dip"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.0"
+                    android:gravity="center_vertical"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/ibSend"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dip"
+                    android:layout_marginLeft="4dip"
+                    android:layout_weight="1.0"
+                    android:drawablePadding="0dip"
+                    android:minWidth="48dip"
+                    android:nextFocusLeft="@+id/etEntryText"
+                    android:src="@drawable/ic_action_send" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

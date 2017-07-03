@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".ui.ConversationFragment">
+
+    <item
+        android:id="@+id/mnuConversationSearch"
+        android:icon="@drawable/action_search_light"
+        app:showAsAction="always"
+        android:title="@string/Search"/>
+    <item
+        android:id="@+id/mnuConversationClose"
+        android:icon="@drawable/close_light"
+        app:showAsAction="always"
+        android:title="@string/Close"/>
+
+</menu>
